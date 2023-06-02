@@ -1,6 +1,7 @@
 package Windows;
 
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -8,11 +9,13 @@ import java.awt.event.FocusListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
 import javax.swing.JTextField;
+
+import Game.MainGame;
 
 public class MainWindow implements ActionListener, FocusListener {
 
+    
     JFrame frame = new JFrame();
     JButton invetoryButton = new JButton("Inventory");
     static boolean openInventory = false;
@@ -24,6 +27,7 @@ public class MainWindow implements ActionListener, FocusListener {
     static boolean openQuests = false;
     JTextField textField = new JTextField("insert command");
     JButton textButton = new JButton("submit");
+    public static Container con;
 
     public MainWindow() {
 
@@ -34,6 +38,8 @@ public class MainWindow implements ActionListener, FocusListener {
         frame.setLocationRelativeTo(null);
         frame.setLayout(null);
         frame.setVisible(true);
+        con = frame.getContentPane();
+        
 
         textButton.setBounds(529, 630, 150, 39);
         textButton.setFocusable(false);
@@ -101,9 +107,15 @@ public class MainWindow implements ActionListener, FocusListener {
         } else {}
 
         if (e.getSource() == textField) {
+        
         }
 
         if (e.getSource() == textButton) {
+            if(textField.getText().equalsIgnoreCase("start")){
+                MainGame mainGame = new MainGame();
+                frame.setVisible(false);
+                textField.setText(" ");
+            }
             textField.setText(" ");
 
         }
