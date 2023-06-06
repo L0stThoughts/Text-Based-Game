@@ -1,16 +1,16 @@
-package Windows;
+package Game;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MusicWindow implements ActionListener {
+public class InventoryWindow implements ActionListener {
     JFrame frame = new JFrame();
     Icon icon = new ImageIcon("Textures/Exit.PNG");
     JButton backButton = new JButton(icon);
 
-    MusicWindow() {
+    InventoryWindow() {
         backButton.setBounds(380, 0, 40, 40);
         backButton.setFocusable(false);
         backButton.setBackground(null);
@@ -27,15 +27,17 @@ public class MusicWindow implements ActionListener {
         frame.setAlwaysOnTop(true);
         frame.setLayout(null);
         frame.setVisible(true);
+        frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+        MainWindow.openInventory = true;
 
-        MainWindow.openMusic = true;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == backButton) {
             frame.dispose();
-            MainWindow.openMusic = false;
+            MainWindow.openInventory = false;
         }
+
     }
 }

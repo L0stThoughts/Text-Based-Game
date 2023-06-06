@@ -1,16 +1,16 @@
-package Windows;
+package Game;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class StatsWindow implements ActionListener {
+public class HelpWindow implements ActionListener {
     JFrame frame = new JFrame();
     Icon icon = new ImageIcon("Textures/Exit.PNG");
     JButton backButton = new JButton(icon);
 
-    StatsWindow() {
+    HelpWindow() {
         backButton.setBounds(380, 0, 40, 40);
         backButton.setFocusable(false);
         backButton.setBackground(null);
@@ -27,15 +27,16 @@ public class StatsWindow implements ActionListener {
         frame.setAlwaysOnTop(true);
         frame.setLayout(null);
         frame.setVisible(true);
+        frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
-        MainWindow.openStats = true;
+        MainWindow.openHelp = true;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == backButton) {
             frame.dispose();
-            MainWindow.openStats = false;
+            MainWindow.openHelp = false;
         }
     }
 }
