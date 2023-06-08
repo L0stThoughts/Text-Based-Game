@@ -6,28 +6,28 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class HelpWindow implements ActionListener {
-    JFrame frame = new JFrame();
+    JFrame frameHelp = new JFrame();
     Icon icon = new ImageIcon("Textures/Exit.PNG");
     JButton backButton = new JButton(icon);
 
     HelpWindow() {
-        backButton.setBounds(380, 0, 40, 40);
+        backButton.setBounds(378, 0, 40, 40);
         backButton.setFocusable(false);
         backButton.setBackground(null);
         backButton.setBorderPainted(false);
         backButton.addActionListener(this);
 
-        frame.add(backButton);
+        frameHelp.add(backButton);
 
-        frame.getContentPane().setBackground(Color.GRAY);
-        frame.setUndecorated(true);
-        frame.setSize(420, 420);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        frame.setAlwaysOnTop(true);
-        frame.setLayout(null);
-        frame.setVisible(true);
-        frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+        frameHelp.getContentPane().setBackground(Color.GRAY);
+        frameHelp.setUndecorated(true);
+        frameHelp.setSize(420, 420);
+        frameHelp.setResizable(false);
+        frameHelp.setLocationRelativeTo(null);
+        frameHelp.setAlwaysOnTop(true);
+        frameHelp.setLayout(null);
+        frameHelp.setVisible(true);
+        frameHelp.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
         MainWindow.openHelp = true;
     }
@@ -35,7 +35,7 @@ public class HelpWindow implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == backButton) {
-            frame.dispose();
+            frameHelp.dispose();
             MainWindow.openHelp = false;
         }
     }
