@@ -1,6 +1,5 @@
 
-##### This is a simple text-based adventure game implemented in Java. The game provides a storyline with multiple choices for the player to make, leading to different outcomes.
-
+##### This is a simple text-based fighting game implemented in Java. The game provides an enemy to fight with and usable items to use.
   
 
 # Getting Started
@@ -29,27 +28,10 @@ The "Inventory" button opens the player's inventory.
 
 The "Music" button controls the game's music.
 
-The "Help" button provides assistance with the game.
+The "Help" button provides assistance with the game. (currently not implemented)
 
   
 
-### Storyline
-
-The game begins with a starting position and presents choices for the player to proceed. The story unfolds based on the chosen options. Here are some key positions and actions in the game:
-
-  
-
-Speak to the Village Elder
-
-Take a Different Path
-
-Explore the Abandoned Mine
-
-Attack the Bandit Camp
-
-These choices lead to further interactions and decisions in the game, with different consequences and outcomes.
-
-  
 
 ### Development
 
@@ -59,9 +41,9 @@ The game is implemented using Java and utilizes Java's Swing library for the gra
 
 Future Improvements
 
-Expand the storyline with more choices and outcomes.
+Expand the line of enemies.
 
-Implement more interactive features, such as puzzles or mini-games.
+Implement more interactive features.
 
 Enhance the graphical interface with improved visuals and animations.
 
