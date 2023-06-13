@@ -256,6 +256,13 @@ public class MainWindow implements ActionListener, FocusListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if (openInventory == false) { // open inventory function
+            if (e.getSource() == invetoryButton) {
+                InventoryWindow inventoryWindow = new InventoryWindow();
+            }
+        } else {
+        }
+
         if (openMusic == false) { // open music function
             if (e.getSource() == musicButton) {
                 MusicWindow musicWindow = new MusicWindow();

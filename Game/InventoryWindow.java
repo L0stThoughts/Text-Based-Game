@@ -77,7 +77,7 @@ public class InventoryWindow {
         for (int i = 0; i < 5; i++) {
             SuperItem item = playerItems[i];
             if (item == null || item instanceof Item_Empty) {
-                itemButtons[i].setText("Empty");
+                itemButtons[i].setText("");
             } else {
                 itemButtons[i].setText(item.getName());
             }
